@@ -1,0 +1,7 @@
+# Ignorar arquivos de build do Java
+*.class
+bin/
+target/
+.vscode/
+.idea/
+*.jar
