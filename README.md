@@ -19,8 +19,9 @@ O projeto segue um design de software com **separação de responsabilidades** �
 - `Utils.java`: Uma classe de **utilidade**, que centraliza funcionalidades auxiliares (como limpar o terminal e esperar a entrada do usuário), tornando a classe `Principal` mais limpa e focada no fluxo do programa.
 - `Principal.java`: A classe principal, atuando como um **coordenador**. Ela orquestra as chamadas para os métodos do `FuncionarioService` e `Utils` para seguir a ordem dos requisitos do teste.
 
-📝 Nota sobre a Arquitetura:
-Inicialmente, planejei usar o Maven e a biblioteca Lombok para gerenciar as dependências e reduzir o código clichê (boilerplate). No entanto, para garantir que o projeto seja leve e não exija configurações adicionais (como a instalação do Maven), optei por uma abordagem em Java puro. Isso torna o projeto mais acessível e fácil de rodar em qualquer ambiente.
+📝 **Nota sobre a Arquitetura**:
+
+Inicialmente, planejei usar o _Maven_ e a biblioteca _Lombok_ para gerenciar as dependências e reduzir o código clichê (boilerplate). No entanto, para garantir que o projeto seja leve e não exija configurações adicionais (como a instalação do Maven), optei por uma abordagem em Java puro. Isso torna o projeto mais acessível e fácil de rodar em qualquer ambiente.
 
 ## 🚀 Como Rodar o Projeto
 
