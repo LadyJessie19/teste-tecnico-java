@@ -38,7 +38,7 @@ Esta opção é ideal para rodar o projeto diretamente no seu ambiente.
     cd teste-tecnico-java
     ```
 2.  **Execute o script no seu terminal:**
-    - **Windows:** Digite `win.bat`
+    - **Windows:** Digite `run.bat`
     - **Linux/macOS:** Digite `bash run.sh`
 
 **O que acontece?** O script cuida de tudo: ele compila os arquivos Java, define a codificação de caracteres correta e executa o programa, mostrando a saída passo a passo.
