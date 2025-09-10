@@ -58,7 +58,7 @@ Esta opção é a forma mais moderna e garantida de rodar o projeto, pois o Dock
     ```
 3.  **Execute o contêiner:**
     ```bash
-    docker run --rm iniflex-app
+    docker run -it --rm iniflex-app
     ```
     O comando `--rm` garante que o contêiner seja removido automaticamente após a execução, mantendo seu sistema limpo.
 
