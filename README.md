@@ -9,6 +9,7 @@ Olá\! Este projeto é a minha solução para o teste prático de programação 
 - **BigDecimal**: Essencial para garantir a precisão de valores monetários.
 - **java.time**: A API moderna de datas, evitando as complexidades das versões legadas.
 - **Scripts de Automação (`.bat` e `.sh`)**: Criados para facilitar a compilação e execução do projeto, garantindo uma experiência de teste perfeita, independentemente do sistema operacional.
+- **Docker**: Uma opção de empacotamento para garantir que a aplicação rode em qualquer ambiente.
 
 ## 📂 Estrutura e Arquitetura do Projeto
 
@@ -24,34 +25,45 @@ Inicialmente, planejei usar o Maven e a biblioteca Lombok para gerenciar as depe
 
 ## 🚀 Como Rodar o Projeto
 
-Para rodar este projeto, você só precisa clonar o repositório e executar o script de automação correspondente ao seu sistema operacional. Simples assim\! 😉
+Você tem duas opções para executar o projeto. Escolha a que for mais conveniente para você\!
+
+### Opção 1: Via Scripts de Automação (Recomendado se tiver Java instalado)
+
+Esta opção é ideal para rodar o projeto diretamente no seu ambiente.
 
 1.  **Clone o repositório:**
     ```bash
-    git clone https://github.com/LadyJessie19/teste-tecnico-java.git
+    git clone https://github.com/seu-usuario/teste-tecnico-java.git
     cd teste-tecnico-java
     ```
 2.  **Execute o script no seu terminal:**
-    - **Windows:** Digite `run.bat`
+    - **Windows:** Digite `win.bat`
     - **Linux/macOS:** Digite `bash run.sh`
 
-O script cuidará de tudo para você: ele compilará os arquivos Java, definirá a codificação de caracteres correta (para evitar problemas com acentos) e executará o programa.
+**O que acontece?** O script cuida de tudo: ele compila os arquivos Java, define a codificação de caracteres correta e executa o programa, mostrando a saída passo a passo.
 
-## 🏆 Execução do Programa
+### Opção 2: Via Docker (Recomendado se não tiver Java instalado)
 
-Ao executar o script `run.bat` ou `bash run.sh`, uma sequência de comandos é executada automaticamente para você no terminal do Windows/MacOS/Linux:
+Esta opção é a forma mais moderna e garantida de rodar o projeto, pois o Docker se encarrega de fornecer o ambiente completo (incluindo o Java). Certifique-se de ter o Docker instalado em sua máquina.
 
-1.  Primeiro, o comando `javac` compila todos os seus arquivos `.java` (`Pessoa.java`, `Funcionario.java`, `Principal.java`, etc.), transformando-os em arquivos executáveis (`.class`). A flag `-encoding UTF-8` garante que todos os caracteres especiais (como acentos) sejam compilados corretamente.
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/seu-usuario/teste-tecnico-java.git
+    cd teste-tecnico-java
+    ```
+2.  **Construa a imagem Docker a partir do `Dockerfile`:**
+    ```bash
+    docker build -t iniflex-app .
+    ```
+3.  **Execute o contêiner:**
+    ```bash
+    docker run --rm iniflex-app
+    ```
+    O comando `--rm` garante que o contêiner seja removido automaticamente após a execução, mantendo seu sistema limpo.
 
-2.  Em seguida, o comando `java` executa a classe principal do seu projeto. A flag `-Dfile.encoding=UTF-8` garante que a saída no console seja exibida corretamente, sem problemas de acentuação.
+**O que acontece?** O Docker constrói a imagem e executa o contêiner. O programa então roda em um ambiente isolado, e a saída é exibida diretamente no seu terminal.
 
-3.  O programa inicia, e a classe `Utils` entra em ação, limpando a tela do terminal e apresentando uma breve introdução.
-
-4.  O programa executa cada requisito do teste um a um, com pausas e limpeza de tela entre cada etapa, graças às chamadas para os métodos da classe `Utils`. Isso torna a visualização da solução clara e organizada.
-
-5.  Ao final, o programa exibe uma mensagem de encerramento, e o script é finalizado.
-
-Essa abordagem foi optada para garantir uma experiência fluida e direta ao testar a solução, evitando a necessidade de comandos manuais.
+Essa abordagem com scripts e Docker foi escolhida para garantir uma experiência de teste fluida e direta, sem a necessidade de comandos manuais. O programa executa cada requisito do teste um a um, com pausas e limpeza de tela entre cada questão, tornando a visualização da solução clara e organizada.
 
 ## 🎯 Requisitos do Teste
 
